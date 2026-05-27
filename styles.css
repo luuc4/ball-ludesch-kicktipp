@@ -22,6 +22,7 @@
 html {
   -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;
+  scroll-padding-top: 80px;
 }
 
 body {
@@ -186,6 +187,7 @@ code, kbd {
   font-size: 1.1rem;
   color: var(--color-text-muted);
   margin-bottom: 1.5rem;
+  max-width: 60ch;
 }
 
 .cta-row {
@@ -285,7 +287,7 @@ section + section {
 /* Steps grid */
 .steps {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(195px, 1fr));
   gap: 1rem;
   list-style: none;
   padding: 0;
@@ -556,10 +558,13 @@ section + section {
   color: var(--color-text-muted);
 }
 
+/* Utility for article spacing on the long anleitung page */
+.section-block + .section-block { margin-top: 3rem; }
+
 /* Responsive */
 @media (max-width: 860px) {
   .prizes {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
   .prizes li:first-child {
     grid-column: 1 / -1;
@@ -580,17 +585,7 @@ section + section {
   section { padding: 2rem 0; }
   .nav { gap: 0.9rem; }
   .nav a { font-size: 0.9rem; }
-  .points li { flex-direction: row; }
   .prize-special { flex-direction: column; text-align: center; }
-}
-
-@media (max-width: 480px) {
-  .prizes {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .prizes li:first-child {
-    grid-column: 1 / -1;
-  }
 }
 
 @media (max-width: 420px) {
