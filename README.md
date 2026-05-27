@@ -22,7 +22,23 @@ python3 -m http.server 8000
 (`index.html` direkt im Browser öffnen funktioniert auch, manche Browser warnen
 dann nur wegen der Manifest-Datei.)
 
-## Hosting
+## Hosting via GitHub Pages
 
-Kann überall statisch gehostet werden: GitHub Pages, Netlify, Intranet-Webserver –
+Ein Deploy-Workflow liegt unter `.github/workflows/pages.yml` und veröffentlicht
+auf `https://luuc4.github.io/ball-ludesch-kicktipp/`.
+
+Einmalige Aktivierung:
+
+1. GitHub → Repo → **Settings** → **Pages**
+2. Bei **Source** auswählen: **GitHub Actions**
+3. Beim nächsten Push auf `main` oder die aktuelle Entwicklungs-Branch deployt
+   der Workflow automatisch.
+
+Falls die finale URL (Custom Domain o.ä.) abweicht, sollten die absoluten
+URLs in den `<meta property="og:*">`-Tags in `index.html` und `anleitung.html`
+angepasst werden.
+
+## Alternative Hostings
+
+Kann auch überall sonst statisch gehostet werden (Netlify, Intranet-Webserver) –
 alle Pfade sind relativ und kommen ohne Build-Step aus.
