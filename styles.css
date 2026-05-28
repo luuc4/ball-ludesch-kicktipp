@@ -697,6 +697,7 @@ section + section {
     gap: 1.5rem;
   }
   .qr-card { display: none; }
+  .brand-text { display: none; }
   .hero-illustration {
     display: block;
     width: 200px;
