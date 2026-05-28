@@ -1,0 +1,23 @@
+{
+  "name": "Ball Ludesch WM 2026 Kicktipp",
+  "short_name": "Ball Kicktipp",
+  "description": "Firmeninternes Kicktipp-Turnier zur Fußball-WM 2026 bei Ball Ludesch.",
+  "start_url": "/ball-ludesch-kicktipp/",
+  "scope": "/ball-ludesch-kicktipp/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1140fe",
+  "icons": [
+    {
+      "src": "assets/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    }
+  ]
+}
