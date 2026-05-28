@@ -250,6 +250,10 @@ code, kbd {
   align-items: center;
 }
 
+.hero-illustration {
+  display: none;
+}
+
 .hero-eyebrow {
   display: inline-block;
   background: var(--color-primary);
@@ -693,6 +697,13 @@ section + section {
     gap: 1.5rem;
   }
   .qr-card { display: none; }
+  .hero-illustration {
+    display: block;
+    width: 240px;
+    max-width: 70%;
+    height: auto;
+    margin: 0 auto 1.25rem;
+  }
   section { padding: 2rem 0; }
   .nav { gap: 0.9rem; }
   .nav a { font-size: 0.9rem; }
