@@ -177,44 +177,59 @@ code, kbd {
 
 .ball-decor .ball {
   position: absolute;
-  background: url("assets/ball.svg") center/contain no-repeat;
-  opacity: 0.09;
+  background: url("assets/soccer_ball.svg") center/contain no-repeat;
+  opacity: 0.10;
   will-change: transform;
   animation: ball-float 14s ease-in-out infinite;
 }
 
+.ball-decor .ball--blue {
+  background-image: url("assets/soccer-ball-blue.svg");
+  opacity: 0.16;
+}
+
 .ball-decor .ball--1 {
-  width: 130px;
-  height: 130px;
-  top: -30px;
-  right: -30px;
+  width: 150px;
+  height: 150px;
+  top: -38px;
+  right: -42px;
   animation-duration: 16s;
   animation-delay: -3s;
 }
 
 .ball-decor .ball--2 {
-  width: 70px;
-  height: 70px;
-  bottom: 12%;
-  left: 4%;
-  opacity: 0.07;
+  width: 80px;
+  height: 80px;
+  bottom: 8%;
+  left: 3%;
   animation-duration: 12s;
   animation-delay: -6s;
 }
 
 .ball-decor .ball--3 {
-  width: 50px;
-  height: 50px;
-  top: 40%;
-  right: 38%;
-  opacity: 0.06;
+  width: 46px;
+  height: 46px;
+  top: 18%;
+  left: 42%;
+  opacity: 0.12;
   animation-duration: 18s;
   animation-delay: -9s;
 }
 
+.ball-decor .ball--4 {
+  width: 60px;
+  height: 60px;
+  bottom: 22%;
+  right: 14%;
+  opacity: 0.10;
+  animation-duration: 20s;
+  animation-delay: -2s;
+}
+
 @keyframes ball-float {
-  0%, 100% { transform: translate3d(0, 0, 0) rotate(0deg); }
-  50%      { transform: translate3d(0, -10px, 0) rotate(8deg); }
+  0%   { transform: translate3d(0, 0, 0) rotate(0deg); }
+  50%  { transform: translate3d(0, -12px, 0) rotate(10deg); }
+  100% { transform: translate3d(0, 0, 0) rotate(0deg); }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -222,9 +237,10 @@ code, kbd {
 }
 
 @media (max-width: 720px) {
-  .ball-decor .ball--1 { width: 100px; height: 100px; top: -20px; right: -25px; }
-  .ball-decor .ball--2 { width: 55px; height: 55px; bottom: 6%; left: 3%; }
+  .ball-decor .ball--1 { width: 110px; height: 110px; top: -24px; right: -28px; }
+  .ball-decor .ball--2 { width: 60px; height: 60px; bottom: 5%; left: 2%; }
   .ball-decor .ball--3 { display: none; }
+  .ball-decor .ball--4 { width: 44px; height: 44px; bottom: 14%; right: 6%; }
 }
 
 .hero-inner {
