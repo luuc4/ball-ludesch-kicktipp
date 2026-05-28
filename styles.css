@@ -518,6 +518,24 @@ section + section {
   text-decoration: none;
 }
 
+/* Intro box (anleitung) */
+.intro-box {
+  background: var(--color-primary-soft);
+  border: 1px solid rgba(17, 64, 254, 0.15);
+  border-radius: var(--radius);
+  padding: 1.5rem 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.intro-box h2 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  color: var(--color-primary-dark);
+  font-size: 1.25rem;
+}
+
+.intro-box p:last-child { margin-bottom: 0; }
+
 /* TOC */
 .toc {
   background: var(--color-bg-alt);
@@ -595,6 +613,11 @@ section + section {
   .nav { gap: 0.9rem; }
   .nav a { font-size: 0.9rem; }
   .prize-special { flex-direction: column; text-align: center; }
+}
+
+@media (max-width: 560px) {
+  html { scroll-padding-top: 120px; }
+  .cta-row .btn { flex: 1 1 100%; }
 }
 
 @media (max-width: 420px) {
