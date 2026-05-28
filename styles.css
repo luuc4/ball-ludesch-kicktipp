@@ -157,6 +157,74 @@ code, kbd {
 .hero {
   padding: 3rem 0 2rem;
   background: linear-gradient(180deg, var(--color-primary-soft) 0%, var(--color-bg) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Decorative footballs — purely cosmetic, hidden from AT */
+.ball-decor {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.ball-decor .ball {
+  position: absolute;
+  background: url("assets/ball.svg") center/contain no-repeat;
+  opacity: 0.09;
+  will-change: transform;
+  animation: ball-float 14s ease-in-out infinite;
+}
+
+.ball-decor .ball--1 {
+  width: 130px;
+  height: 130px;
+  top: -30px;
+  right: -30px;
+  animation-duration: 16s;
+  animation-delay: -3s;
+}
+
+.ball-decor .ball--2 {
+  width: 70px;
+  height: 70px;
+  bottom: 12%;
+  left: 4%;
+  opacity: 0.07;
+  animation-duration: 12s;
+  animation-delay: -6s;
+}
+
+.ball-decor .ball--3 {
+  width: 50px;
+  height: 50px;
+  top: 40%;
+  right: 38%;
+  opacity: 0.06;
+  animation-duration: 18s;
+  animation-delay: -9s;
+}
+
+@keyframes ball-float {
+  0%, 100% { transform: translate3d(0, 0, 0) rotate(0deg); }
+  50%      { transform: translate3d(0, -10px, 0) rotate(8deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ball-decor .ball { animation: none; }
+}
+
+@media (max-width: 720px) {
+  .ball-decor .ball--1 { width: 100px; height: 100px; top: -20px; right: -25px; }
+  .ball-decor .ball--2 { width: 55px; height: 55px; bottom: 6%; left: 3%; }
+  .ball-decor .ball--3 { display: none; }
 }
 
 .hero-inner {
