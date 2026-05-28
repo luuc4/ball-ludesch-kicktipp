@@ -558,6 +558,17 @@ section + section {
   color: var(--color-text-muted);
 }
 
+.site-footer .disclaimer {
+  margin-top: 1rem;
+  font-size: 0.78rem;
+  line-height: 1.5;
+  color: var(--color-text-muted);
+  opacity: 0.85;
+  max-width: 70ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* Utility for article spacing on the long anleitung page */
 .section-block + .section-block { margin-top: 3rem; }
 
@@ -579,9 +590,7 @@ section + section {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
-  .qr-card {
-    padding: 1.25rem;
-  }
+  .qr-card { display: none; }
   section { padding: 2rem 0; }
   .nav { gap: 0.9rem; }
   .nav a { font-size: 0.9rem; }
